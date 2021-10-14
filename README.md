@@ -61,3 +61,4 @@ Quit the server with CTRL-BREAK.
 ```
 Now we can see the project is running at http://127.0.0.1:8000/
 
+![alt text](https://github.com/dpradeep42/djangoProject/blob/main/images/project_running.png)
