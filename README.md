@@ -36,3 +36,23 @@ After we’ve created the Django Project we’ll have the project created in the
 -	manage.py
 
 &emsp;&emsp;This is a Python script that we will use a lot. It will be associates with many commands as we build our web app!
+
+Now to run and check the project which we’ve created we’ll use the below command from the project directory.
+	
+	python manage.py runserver
+
+after running the above command we’ll see something like below.
+```
+C:\Users\dpradeepkumar\Django\djangoProject\DjangoBasic>python manage.py runserver
+Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified no issues (0 silenced).
+
+You have 18 unapplied migration(s). Your project may not work properly until you apply the migrations for app(s): admin, auth, contenttypes, sessions.
+Run 'python manage.py migrate' to apply them.
+October 14, 2021 - 11:49:05
+Django version 3.2.8, using settings 'DjangoBasic.settings'
+Starting development server at http://127.0.0.1:8000/
+```
+
