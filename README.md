@@ -17,6 +17,9 @@ django-admin startproject project_name
 	django-admin startproject DjangoBasic
 
 After we’ve created the Django Project we’ll have the project created in the respective directory and we can see the folder with the project name and also a few files created like 
+
+![alt text](https://github.com/dpradeep42/djangoProject/blob/main/images/project_overview.png)
+
 -	__init.py__
 
 &emsp;&emsp;It’s a blank python file. But with the naming convention of this file python will treat this directory as a package.
