@@ -9,3 +9,10 @@ To start with
 Install Django using PIP
       
     pip install django
+
+To create a Django project use the below syntax
+
+django-admin startproject project_name 
+
+	django-admin startproject DjangoBasic
+
