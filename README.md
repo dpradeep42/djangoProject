@@ -54,5 +54,7 @@ Run 'python manage.py migrate' to apply them.
 October 14, 2021 - 11:49:05
 Django version 3.2.8, using settings 'DjangoBasic.settings'
 Starting development server at http://127.0.0.1:8000/
+Quit the server with CTRL-BREAK.
 ```
+Now we can see the project is running at http://127.0.0.1:8000/
 
