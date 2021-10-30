@@ -76,3 +76,10 @@ After running the project we can see that
 You have 18 unapplied migration(s). Your project may not work properly until you apply the migrations for app(s): admin, auth, contenttypes, sessions.
 Run 'python manage.py migrate' to apply them.
 ```
+
+### What is a migration?
+-	A migration allows you to move databases from one design to another, this is also reversible.
+-	So you can “migrate” your database
+-	We will touch back on this later, for now you can ignore this warning.
+
+For now we can ignore this.
