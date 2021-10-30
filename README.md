@@ -94,5 +94,36 @@ Creating Django Application
 
 	Syntax: python manage.py startapp <App Name>
 
-
 	python manage.py startapp first_app
+
+After creating the first_app we can see a few files will be created as below.
+
+![alt text](https://github.com/dpradeep42/djangoProject/blob/main/images/first_app.png)
+
+-	__init__.py
+
+&emsp;&emsp;This is a blank Python script that due to its special name let’s Python know that this directory can be treated as a package
+
+-	admin.py
+
+&emsp;&emsp;You can register your models here which Django will then use them with Django’s admin interface.
+
+-	apps.py
+
+&emsp;&emsp;Here you can place application specific configurations
+
+-	models.py
+
+&emsp;&emsp;Here you store the application’s data models
+
+-	tests.py
+
+&emsp;&emsp;Here you can store test functions to test your code
+
+-	views.py
+
+&emsp;&emsp;This is where you have functions that handle requests and return responses
+
+-	Migrations folder
+
+&emsp;&emsp;This directory stores database specific information as it relates to the models
