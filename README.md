@@ -65,6 +65,8 @@ Now we can see the project is running at http://127.0.0.1:8000/
 
 ![alt text](https://github.com/dpradeep42/djangoProject/blob/main/images/project_running.png)
 
+We can see that <span style="color: green"> DEBUG=True </span>
+
 After running the project we can see that 
 ```
 You have 18 unapplied migration(s). Your project may not work properly until you apply the migrations for app(s): admin, auth, contenttypes, sessions.
