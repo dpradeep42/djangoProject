@@ -2,9 +2,7 @@
 ## Installation of required softwares or tools
 ### You can choose any one of the below mentioned methods
 ### 1. Standalone Installation of Python.
-Go to [Python](https://www.python.org/) and download the compaitable one and install the same on your machine. 
-
-_While installing Python make sure you're not skipping PIP in it_.
+Go to [Python](https://www.python.org/) and download the compaitable one and install the same on your machine. _While installing Python make sure you're not skipping PIP in it_.
 
 To start with
 
@@ -64,3 +62,9 @@ Quit the server with CTRL-BREAK.
 Now we can see the project is running at http://127.0.0.1:8000/
 
 ![alt text](https://github.com/dpradeep42/djangoProject/blob/main/images/project_running.png)
+
+After running the project we can see that 
+```
+You have 18 unapplied migration(s). Your project may not work properly until you apply the migrations for app(s): admin, auth, contenttypes, sessions.
+Run 'python manage.py migrate' to apply them.
+```
