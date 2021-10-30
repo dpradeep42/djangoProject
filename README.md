@@ -83,3 +83,8 @@ Run 'python manage.py migrate' to apply them.
 -	We will touch back on this later, for now you can ignore this warning.
 
 For now we can ignore this.
+
+## Creating our first django Application.
+### What is Django Project and Django Application
+-	A Django Project is a collection of applications and configurations that when combined together will make up the full web application (your complete website running with Django)
+-	A Django Application is created to perform a particular functionality for your entire web application. For example you could have a registration app, a polling app, comments app, etc.
