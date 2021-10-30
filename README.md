@@ -88,3 +88,10 @@ For now we can ignore this.
 ### What is Django Project and Django Application
 -	A Django Project is a collection of applications and configurations that when combined together will make up the full web application (your complete website running with Django)
 -	A Django Application is created to perform a particular functionality for your entire web application. For example you could have a registration app, a polling app, comments app, etc.
+-	These Django Apps can then be plugged into other Django Projects, so you can reuse them! (Or use other people’s apps)
+
+Creating Django Application
+
+	Syntax: python manage.py startapp <App Name>
+
+	python manage.py startapp first_app
