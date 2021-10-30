@@ -67,6 +67,10 @@ Now we can see the project is running at http://127.0.0.1:8000/
 
 We can see that <span style="color: green"> DEBUG=True </span>
 
+![alt text](https://github.com/dpradeep42/djangoProject/blob/main/images/debug_true.png)
+
+We can change this option in settings.py file. This functionality enables us to see what are all the errors which are in our application if there were any. But, before going into the production we have Disable this option so that the end users can't see the errors which are in the application.
+
 After running the project we can see that 
 ```
 You have 18 unapplied migration(s). Your project may not work properly until you apply the migrations for app(s): admin, auth, contenttypes, sessions.
