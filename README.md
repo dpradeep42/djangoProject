@@ -127,3 +127,9 @@ After creating the first_app we can see a few files will be created as below.
 -	Migrations folder
 
 &emsp;&emsp;This directory stores database specific information as it relates to the models
+
+Now, to let our project know that we've created a new app called first_app we've to map it in settings.py file.
+
+goto INSTALLED_APPS in settings.py and add your app name at the end. In our case it's 'first_app'
+
+![alt text](https://github.com/dpradeep42/djangoProject/blob/main/images/installed_apps.png)
