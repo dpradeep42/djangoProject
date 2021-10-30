@@ -94,4 +94,5 @@ Creating Django Application
 
 	Syntax: python manage.py startapp <App Name>
 
+
 	python manage.py startapp first_app
