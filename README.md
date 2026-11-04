@@ -1,135 +1,39 @@
-# Django
-## Installation of required softwares or tools
-### You can choose any one of the below mentioned methods
-### 1. Standalone Installation of Python.
-Go to [Python](https://www.python.org/) and download the compaitable one and install the same on your machine. 
+# DjangoBasic
 
-_While installing Python make sure you're not skipping PIP in it_.
+A small Django practice project. `/` returns a plain "Hello World!" response, and `/admin/` is Django's admin site.
 
-To start with
+## Setup
 
-Install Django using PIP
-      
-    pip install django
+Python 3.10 or newer.
 
-To create a Django project use the below syntax
-
-django-admin startproject project_name 
-
-	django-admin startproject DjangoBasic
-
-After we’ve created the Django Project we’ll have the project created in the respective directory and we can see the folder with the project name and also a few files created like 
-
-![alt text](https://github.com/dpradeep42/djangoProject/blob/main/images/project_overview.png)
-
--	__init.py__
-
-&emsp;&emsp;It’s a blank python file. But with the naming convention of this file python will treat this directory as a package.
-
--	settings.py
-
-&emsp;&emsp;This is where you’ll save all your project settings.
-
--	urls.py
-
-&emsp;&emsp;This is a Python script that will store all the URL patterns for your project. Basically, the different pages of your web application.
-
--	wsgi.py
-
-&emsp;&emsp;This is a Python script that acts as the Web Server Gateway Interface. It will later on help us deploy our web app to production.
-
--	manage.py
-
-&emsp;&emsp;This is a Python script that we will use a lot. It will be associates with many commands as we build our web app!
-
-Now to run and check the project which we’ve created we’ll use the below command from the project directory.
-	
-	python manage.py runserver
-
-after running the above command we’ll see something like below.
-```
-C:\Users\dpradeepkumar\Django\djangoProject\DjangoBasic>python manage.py runserver
-Watching for file changes with StatReloader
-Performing system checks...
-
-System check identified no issues (0 silenced).
-
-You have 18 unapplied migration(s). Your project may not work properly until you apply the migrations for app(s): admin, auth, contenttypes, sessions.
-Run 'python manage.py migrate' to apply them.
-October 14, 2021 - 11:49:05
-Django version 3.2.8, using settings 'DjangoBasic.settings'
-Starting development server at http://127.0.0.1:8000/
-Quit the server with CTRL-BREAK.
-```
-Now we can see the project is running at http://127.0.0.1:8000/
-
-![alt text](https://github.com/dpradeep42/djangoProject/blob/main/images/project_running.png)
-
-We can see that <span style="color: green"> DEBUG=True </span>
-
-![alt text](https://github.com/dpradeep42/djangoProject/blob/main/images/debug_true.png)
-
-We can change this option in settings.py file. This functionality enables us to see what are all the errors which are in our application if there were any. But, before going into the production we have Disable this option so that the end users can't see the errors which are in the application.
-
-After running the project we can see that 
-```
-You have 18 unapplied migration(s). Your project may not work properly until you apply the migrations for app(s): admin, auth, contenttypes, sessions.
-Run 'python manage.py migrate' to apply them.
+```bash
+python -m venv .venv
+source .venv/bin/activate
+pip install -r requirements.txt
+cp .env.example .env
 ```
 
-### What is a migration?
--	A migration allows you to move databases from one design to another, this is also reversible.
--	So you can “migrate” your database
--	We will touch back on this later, for now you can ignore this warning.
+Edit `.env` and set `SECRET_KEY` to a long random string. From `DjangoBasic/`:
 
-For now we can ignore this.
+```bash
+python manage.py migrate
+python manage.py runserver
+```
 
-## Creating our first django Application.
-### What is Django Project and Django Application
--	A Django Project is a collection of applications and configurations that when combined together will make up the full web application (your complete website running with Django)
--	A Django Application is created to perform a particular functionality for your entire web application. For example you could have a registration app, a polling app, comments app, etc.
--	These Django Apps can then be plugged into other Django Projects, so you can reuse them! (Or use other people’s apps)
+The site listens on http://127.0.0.1:8000/.
 
-Creating Django Application
+## Environment variables
 
-	Syntax: python manage.py startapp <App Name>
+`DjangoBasic/DjangoBasic/settings.py` reads these from the environment. If a variable is missing, a `.env` file next to `manage.py` is used, then a `.env` file at the repository root. Variables already set in the environment are left unchanged.
 
-	python manage.py startapp first_app
+| Variable | Default | Purpose |
+| --- | --- | --- |
+| `SECRET_KEY` | `dev-only-insecure-key` | Signing key. Replace it before any shared or production use. |
+| `DEBUG` | `False` | Debug mode when the value is `True`, `1`, `yes`, or `on`. Anything else, including an unset variable, leaves it off. |
+| `ALLOWED_HOSTS` | empty | Comma-separated hostnames, for example `localhost,127.0.0.1`. Required when `DEBUG` is off. |
 
-After creating the first_app we can see a few files will be created as below.
+Do not commit `.env`.
 
-![alt text](https://github.com/dpradeep42/djangoProject/blob/main/images/first_app.png)
+## License
 
--	__init__.py
-
-&emsp;&emsp;This is a blank Python script that due to its special name let’s Python know that this directory can be treated as a package
-
--	admin.py
-
-&emsp;&emsp;You can register your models here which Django will then use them with Django’s admin interface.
-
--	apps.py
-
-&emsp;&emsp;Here you can place application specific configurations
-
--	models.py
-
-&emsp;&emsp;Here you store the application’s data models
-
--	tests.py
-
-&emsp;&emsp;Here you can store test functions to test your code
-
--	views.py
-
-&emsp;&emsp;This is where you have functions that handle requests and return responses
-
--	Migrations folder
-
-&emsp;&emsp;This directory stores database specific information as it relates to the models
-
-Now, to let our project know that we've created a new app called first_app we've to map it in settings.py file.
-
-goto INSTALLED_APPS in settings.py and add your app name at the end. In our case it's 'first_app'
-
-![alt text](https://github.com/dpradeep42/djangoProject/blob/main/images/installed_apps.png)
+Released under the MIT License. See [LICENSE](LICENSE).
